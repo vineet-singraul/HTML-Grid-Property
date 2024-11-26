@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRIDE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            height: 100%;
+            widows: 100%;
+            background-color: rgb(59, 57, 57);
+            border: 2px solid;
+            display: grid;
+            padding: 4rem;
+            /* row-gap: 1rem;
+            column-gap: 2rem; */
+            gap: 1rem;
+            /* grid-template-rows: 100px 100px; */
+            grid-template-rows: repeat(5, 1fr);
+            /* grid-template-columns: 100px 100px 100px ; */
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        .item {
+            background-color: rgb(94, 94, 194);
+            border: 5px solid;
+            color: aliceblue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .header {
+            /* grid-column: 1/4; */
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+ /* NEV BAR KA DESIGN HAI YAHA */
+               .n_div_ka {
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            gap: 20vw;
+            /* border: 2px solid;
+            border-radius: 10vw; */
+        }
+
+        .clone_div img {
+            width: 10vw;
+            padding-left: 200px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .manu_div {
+            color: black;
+            display: flex;
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 36px;
+            justify-content: space-around;
+            gap: 50px;
+
+        }
+
+        li:hover {
+            color: rgb(108, 108, 108);
+            background-color: #ffffff;
+        }
+
+
+
+
+
+
+
+
+        .fotter {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            /* grid-column: 1/4; */
+        }
+
+        .sidebar {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .cont1 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        /*YADI 700 PX SE KUM HAI TO*/
+        @media (max-width:800px) {
+            .comtainer {
+                /* row-gap: 1rem;
+                  column-gap: 2rem; */
+                gap: 1rem;
+                /* grid-template-rows: 100px 100px; */
+                grid-template-rows: repeat(5, 2fr);
+                /* grid-template-columns: 100px 100px 100px ; */
+                grid-template-columns: repeat(3, fr);
+
+            }
+
+            .header,
+            .fotter {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .cont1 {
+
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .sidebar {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .cont2 {
+
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            .cont3 {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+        }
+
+        /*YADI 300 PX SE KUM HAO TO */
+        @media (max-width:500px) {
+            .container {
+                gap: 1rem;
+                /* grid-template-rows: 100px 100px; */
+                grid-template-rows: repeat(6, 1fr);
+                /* grid-template-columns: 100px 100px 100px ; */
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .header,
+            .fotter {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .cont1 {
+
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .sidebar {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .comt2 {
+
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .cont3 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="item header">
+    <nev class="n_div_ka">
+         <div class="clone_div">
+            <img src="https://lh5.googleusercontent.com/YrtpCpfxE25IMnQYelivigVqMBx42hJO1esSwPunDGK_zXFyxql2m-RyEzchVwmPumtT4wKJpmALRN54i-9-eqfz5Hc7vqGEXsjuc5WeZn5YaX_RoDO0Z1NZ_SsRKW4n5kTNXiZEJO7-14qq-lWmNLQ"
+            alt="logo">
+                </div>
+                <div class="manu_div">
+                    <li><span>Products</span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Pricing</span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Resources</span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>About US</span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Contect us</span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></li>
+                </div>
+            </nev>
+        </div>
+
+
+
+
+
+
+        <div class="item sidebar">
+            <h2>Side Bar</h2>
+        </div>
+        <div class="item cont1">
+            <h2>content</h2>
+        </div>
+        <div class="item comt2">
+            <h2>comtent</h2>
+        </div>
+        <div class="item cont3">
+            <h2>content</h2>
+        </div>
+        <div class="item fotter">
+            <h2>Fotter</h2>
+        </div>
+    </div>
+</body>
+
+</html>

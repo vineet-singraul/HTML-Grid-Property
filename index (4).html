@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRIDE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            height: 100%;
+            widows: 100%;
+            background-color: rgb(59, 57, 57);
+            border: 2px solid;
+            display: grid;
+            padding: 4rem;
+            
+            gap: 1rem;
+            grid-template-rows: 150px 200px;
+            grid-template-columns: 100px;
+            
+
+        }
+
+        .item {
+            background-color: rgb(94, 94, 194);
+            border: 5px solid;
+            color: aliceblue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .header {
+            /* grid-column: 1/4; */
+            grid-template-columns:10px;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .fotter {
+
+            grid-column-start: 1;
+            grid-column-end: 4;
+            /* grid-column: 1/4; */
+        }
+
+
+        .sidebar {
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-template-rows: 5px;
+        }
+
+        .cont1 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+        }
+      
+
+
+         
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item header">
+            <h2>Header</h2>
+        </div>
+        <div class="item sidebar">
+            <h2>Side Bar</h2>
+        </div>
+        <div class="item cont1">
+            <h2>content</h2>
+        </div>
+        <div class="item comt2">
+            <h2>comtent</h2>
+        </div>
+        <div class="item cont3">
+            <h2>content</h2>
+        </div>
+        <div class="item fotter">
+            <h2>Fotter</h2>
+        </div>
+    </div>
+</body>
+
+</html>
